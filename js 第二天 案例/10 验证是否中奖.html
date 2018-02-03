@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="txt" value="请输入" />
+		<button id="btn">查询</button>
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			}
+			$("btn").onclick=function(){
+					alert($("txt").value);
+					if($("txt").value=="刘德华")
+					alert("查询成功");
+					else
+					alert("查无此人");
+				}
+		</script>
+	</body>
+</html>

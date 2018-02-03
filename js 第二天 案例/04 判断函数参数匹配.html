@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function fn(a,b){
+				console.log(fn.length);//得到的是函数形参的个数
+				console.log(arguments.length);//得到的是函数实参的个数
+				if(fn.length==arguments.length){
+					console.log(a+b);
+				}
+				else{
+					console.error("对不起，您的参数不匹配，正确的参数个数为：" + fn.length);
+				}
+			}
+			fn(1,2);
+		</script>
+	</body>
+</html>
