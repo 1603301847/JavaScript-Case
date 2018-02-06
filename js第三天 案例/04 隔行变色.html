@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				padding: 0px;
+			}
+			li{
+				list-style: none;
+				line-height: 30px;
+				margin-top: 50px; 
+				width: 500px;
+			}
+			span{
+				margin-left: 50px;
+			}
+			.current{
+				background: #ccc;
+			}
+		</style>
+	</head>
+	<script type="text/javascript">
+		  window.onload=function(){
+		  var lis=document.getElementsByTagName("li");
+		  for(var i=0;i<=lis.length;i++){
+		  	if(i%2!=0){
+		  		lis[i].style.backgroundColor='#eee';
+		  	}
+		  	lis[i].onmouseover=function(){
+		  	this.className="current";
+		  }
+		  	lis[i].onmouseout=function(){
+		  	this.className="";
+		  }
+		  	}
+		  
+		  }
+	</script>
+	<body>
+		<ul>
+			<li>
+			<span>上证指数</span><span>3641</span><span>10-5</span><span>0.61%</span>
+			</li> 
+			<li>
+			<span>上证指数</span><span>3641</span><span>10-5</span><span>0.61%</span>
+			</li> 
+			<li>
+			<span>上证指数</span><span>3641</span><span>10-5</span><span>0.61%</span>
+			</li> 
+			<li>
+			<span>上证指数</span><span>3641</span><span>10-5</span><span>0.61%</span>
+			</li> 
+			<li>
+			<span>上证指数</span><span>3641</span><span>10-5</span><span>0.61%</span>
+			</li> 
+		</ul>	
+	</body>
+</html>
