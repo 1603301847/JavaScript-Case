@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var txt=document.getElementById("txt");
+			var btn=document.getElementById("btn"); 
+			btn.onclick=function(){
+				var val=txt.value;
+				switch(val){
+					case "香蕉":
+					alert("香蕉的价格是  5元");
+					break;
+					case "苹果":
+					alert("苹果的价格是  3元");
+					break;
+					case "草莓":
+					alert("草莓的价格是  1元");
+					break;
+					default:
+					alert("查无此水果");
+				}
+			}
+		}
+	</script>
+	<body>
+		<input type="text" id="txt" />
+		<input type="button" id="btn" value="查询水果" />
+	</body>
+</html>

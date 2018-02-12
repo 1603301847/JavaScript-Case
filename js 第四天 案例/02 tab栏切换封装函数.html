@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			ul{
+				list-style: none;
+			}
+			.box{
+			border: 1px solid #ccc;
+			width: 400px;
+			margin: 100px auto;	
+			height: 300px;
+			overflow: hidden;
+			}
+			.top span{
+				border: 1px solid #fff;
+				width: 98px;
+				background-color: pink;
+				float: left;                                                                                  
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				cursor: pointer;
+			}
+			.top span.current{
+				background-color: purple;
+			}
+			li{
+				margin-top: 50px;
+				width: 100%;
+				height: 300px;
+				background-color: purple;
+				display: none;
+			}
+			.bottom li.show{
+				display: block;
+			}
+		</style>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			function tab(obj){
+				var target=document.getElementById(obj);
+				var spans=target.getElementsByTagName("span");
+				var lis=target.getElementsByTagName("li");
+				
+				for(var i=0;i<spans.length;i++){
+					spans[i].index=i;
+					spans[i].onclick=function(){
+						 for(var j=0;j<spans.length;j++){
+						 	spans[j].className="";
+						 	lis[j].className="";
+						 }
+					this.className="current";
+					lis[this.index].className="show";
+					}
+				}
+			}
+			tab("one");
+			tab("two");
+			tab("three");
+		}
+	</script>
+	<body>
+		<div class="box" id="one">
+			<div class="top">
+				<span class="current">新闻</span>
+				<span>体育</span>
+				<span>娱乐</span>
+				<span>八卦</span> 
+			</div>
+			<div class="bottom">
+				<ul>
+					<li class="show">新闻模块</li>
+					<li>体育模块</li>
+					<li>娱乐模块</li>
+					<li>八卦模块</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box" id="two">
+			<div class="top">
+				<span class="current">新闻</span>
+				<span>体育</span>
+				<span>娱乐</span>
+				<span>八卦</span> 
+			</div>
+			<div class="bottom">
+				<ul>
+					<li class="show">新闻模块</li>
+					<li>体育模块</li>
+					<li>娱乐模块</li>
+					<li>八卦模块</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box" id="three">
+			<div class="top">
+				<span class="current">新闻</span>
+				<span>体育</span>
+				<span>娱乐</span>
+				<span>八卦</span> 
+			</div>
+			<div class="bottom">
+				<ul>
+					<li class="show">新闻模块</li>
+					<li>体育模块</li>
+					<li>娱乐模块</li>
+					<li>八卦模块</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

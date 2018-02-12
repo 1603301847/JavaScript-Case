@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: url(image/1.jpg) no-repeat;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var sele=document.getElementById("sele");
+				sele.onchange=function(){
+//					alert(this.value);
+					switch(this.value){
+						case "1":
+						document.body.style.backgroundImage="url(Image/1.jpg)";
+						break;
+						case "2":
+						document.body.style.backgroundImage="url(Image/2.jpg)";
+						break;
+						case "3":
+						document.body.style.backgroundImage="url(Image/3.jpg)";
+						break;
+						case "4":
+						document.body.style.backgroundImage="url(Image/4.jpg)";
+						break;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<select name="" id="sele">
+			<option value="1">春意盎然</option>
+			<option value="2">夏日央央</option>
+			<option value="3">秋声瑟瑟</option>
+			<option value="4">冬雪皑皑</option>
+		</select>
+	</body>
+</html>
