@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 350px;
+				height: 250px;
+				border: 1px solid #ccc;
+				margin: 100px auto;
+			}
+			.dt{
+				padding-left: 10px;
+				line-height: 35px;
+				font-weight: 700;
+				color: #036;
+			}
+			.dd-t{
+				overflow: hidden;
+			}
+			.dd{
+				padding: 10px;
+			}
+			.icon{
+				width:  50px;
+				height: 50px;
+				float: left;
+				background: url(image/Icon.png) no-repeat;
+				margin-right: 10px;
+			}
+			#yunshi{
+				width: 80px;
+				height: 13px;
+				display: inline-block;
+				background: url(image/yunshi.png) no-repeat;
+				position: relative;
+			}
+			#star{
+				width: 0;
+				height: 13px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: url(image/yunshi.png) no-repeat left bottom;
+			}
+		</style>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+		function $(id){
+			return document.getElementById(id);
+		}
+		var arr=[10,4,8,2]; 
+		//盒子一共是80像素  分成10份 每份8像素
+		var textArr=["今天的你很适合学习一些心理学，玄学，宗教类的知识，或者会遇到这方面的贵人，今天特别适合追求...[详细]","今天的你适合和朋友或者家人一起聚聚会，参加娱乐游戏，心情闪闪发光的一天。...[详细]","今天的你在工作上执行力很强，表现力也很不错，部分人今天也会做一些关于接待的工作，工作很出色...[详细]","今天的你适合学习一些有关心理学，宗教，玄学类的知识。你今天比较有精神层面的追求。...[详细]","今天的你的偏财运很好，今天会有很可观的偏财收益哦。今天与朋友们也相处很愉快，心情美美哒。...[详细]","今天的你很适合和伴侣一起出游，交流 ，谈心。今天有利你们增进情感。部分单身的人今天桃花运很...[详细]","今天的你可能会进行接待方面的工作，今天你反应灵敏，思维敏捷，擅长交际，又能给人如沐春风的感...[详细]","今天的你很可能会参加一个非常有趣的娱乐活动，会让你感觉回到童年一般。部分人今天有偏财收入。...[详细]","今天的你适合待在家和家人聚聚会，聊聊天，增进家庭成员之间的感情。不过今天某些家庭成员容易因...[详细]","今天的你说话时要谨慎，可能你不经意间说的某个领导的某个小道消息，被人广泛谣传，从而引起领导...[详细]","今天的你可能会有一笔额外的收入进账，而且可能你还从中拿出部分钱为朋友或者其他需要的人花费了...[详细]","今天的你可能因为同伴某些言语而不开心，部分人今天的身体会出点小状况。...[详细]"];
+		sele.onchange=function(){
+			//得到当前的索引号
+//			alert(this.value);
+			$("icon").style.backgroundPosition="0 "+(-this.value*50)+"px";
+			$("content").innerHTML=textArr[this.value];
+			$("star").style.width=arr[this.value]*8+"px";
+			
+		}
+		}
+	</script>
+	<body>
+		<div class="box">
+			<div class="dt">星座运势</div>
+			<div class="dd-t">
+				<div class="icon" id="icon"></div>
+				<div class="right">
+					<select id="sele">
+						<option value="0">白羊座    03.21-04.19</option>
+						<option value="1">金牛座    04.20-05.20</option>
+						<option value="2">双子座    05.21-06.21</option>
+						<option value="3">巨蟹座    06.22-07.22</option>
+						<option value="4">狮子座    07.23-08.22</option>
+						<option value="5">处女座    08.23-09.22</option>
+						<option value="6">天秤座    09.23-10.23</option>
+						<option value="7">天蝎座   10.24-11.22</option>
+						<option value="8">射手座    11.23-12.21</option>
+						<option value="9">魔蝎座    12.22-01.19</option>
+						<option value="10">水瓶座    01.20-02.18</option>
+						<option value="11">双鱼座    02.19-03.20</option>
+					</select>
+					<div>
+					今日运势：<span id="yunshi">
+						<span id="star"></span>
+					</span>
+					</div>
+				</div>
+			</div>
+			<div class="dd-b" id="content">
+				今天的你的朋友圈中可能爆出谣言，绯闻，这些不实信息可能还与你的伴侣有关，这让你很受伤。不过...[详细]
+			</div>
+		</div>
+	</body>
+</html>
