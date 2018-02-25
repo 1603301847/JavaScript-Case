@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				margin: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+//			var dom=document.getElementsByClassName("demo");
+//			alert(dom.length);
+			//封装自己的class类名
+			function getclass(classname){
+				//如果浏览器支持,则直接返回
+				if(document.getElementsByClassName){
+					return document.getElementsByClassName(classname);
+				}
+				//不支持的浏览器
+				var arr=[];
+				var dom=document.getElementsByTagName("*");
+			//	alert(dom.length);
+			for(var i=0;i<dom.length;i++){
+				if(dom[i].className==classname){
+					arr.push(dom[i]);
+				}
+			}
+			return arr; 
+			}
+			console.log(getclass("demo").length);
+			console.log(getclass("test").length);
+		}	
+		</script>	
+	</head>
+	<body>
+		<div class="demo"></div>
+		<div class="=test"></div>
+		<div></div>
+		<div></div>
+		<div class="demo test"></div>
+		<div></div>
+		<div class="demo"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+</html>

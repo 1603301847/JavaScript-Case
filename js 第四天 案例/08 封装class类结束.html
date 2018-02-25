@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				margin: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+//			封装自己的类名
+			function getClass(classname){
+//				判断支持否
+			if(document.getElementsByClassName)
+			{
+				return document.getElementsByClassName(classname);
+			}
+			var arr=[];//用于返回数组
+			var dom=document.getElementsByTagName("*");
+			for(var i=0;i<dom.length;i++){//遍历所有的dom元素
+				var txtarr=dom[i].className.split(" ");//分隔类名 并且转换为数组
+				for(var j=0;j<txtarr.length;j++){//遍历分隔的数组
+					if(txtarr[j]==classname){
+						arr.push(dom[i]);//div
+					} 
+				}
+			}
+			return arr;
+			}
+			console.log(getClass("test").length);
+			var test=getClass("test");
+			for(var i=0;i<test.length;i++){
+				test[i].style.backgroundColor="purple";
+			}
+		}	
+		</script>	
+	</head>
+	<body>
+		<div class="demo"></div>
+		<div class="test"></div>
+		<div></div>
+		<div></div>
+		<div class="demo test one"></div>
+		<div></div>
+		<div class="demo one"></div>
+		<div></div>
+		<div class="demo"></div>
+		<div class="one two test"></div>
+	</body>
+</html>
