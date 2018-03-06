@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var one=document.getElementById("one");
+				var div=one.nextElementSibling||on.nextSibling;
+				div.style.backgroundColor="red";
+				var two=document.getElementById("two");
+				var div2=two.firstElementChild||two.firstChild;
+				div2.style.backgroundColor="yellow";
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="two">
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li id="one">123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+		</ul>	
+	</body>
+</html>

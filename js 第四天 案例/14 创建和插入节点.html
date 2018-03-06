@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="demo">
+			<div id="one"></div>
+			<div id="xiongda">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var demo=document.getElementById("demo");
+		var test=document.createElement("div");
+		demo.appendChild(test);
+		var childrens=demo.children;
+		var firstDiv=document.createElement("div");
+		demo.appendChild(firstDiv);
+		demo.insertBefore(firstDiv,childrens[0]);
+//		demo.insertBefore(firstDiv,null);
+		demo.removeChild(firstDiv);
+		var da=document.getElementById("xiongda");
+		demo.removeChild(da);
+//		demo.appendChild(childrens[0].cloneNode());
+		var la=childrens[0].cloneNode();
+		demo.appendChild(la);
+		demo.parentNode.appendChild(demo.cloneNode(true));
+	</script>
+</html>

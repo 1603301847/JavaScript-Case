@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+			var ul=document.getElementById("ul");
+			var childrens=ul.childNodes;
+			for(var i=0;i<=childrens.length;i++){
+				if(childrens[i].nodeType==1){
+					childrens[i].style.backgroundColor='pink';
+				}
+			}
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="ul">
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+		</ul>
+	</body>
+</html>
