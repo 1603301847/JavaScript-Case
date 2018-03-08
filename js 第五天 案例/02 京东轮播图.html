@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0px;padding: 0px;}
+			#box{
+				width: 590px;
+				height: 470px;
+				margin: 100px auto;
+				overflow: hidden;
+				position: relative;
+			}
+			ul{
+				list-style: none;
+			}
+			.circle{
+				position: absolute;
+				left: 50%;
+				margin-left: -50px;
+				bottom: 10px;
+			}
+			.circle span{
+				float: left;
+				width: 18px;
+				height: 18px;
+				border-radius: 50%;
+				background-color: pink;
+				text-align: center;
+				line-height: 18px;
+				margin-right: 10px;
+				cursor: pointer;
+			}
+			.circle span.current{
+				background: purple;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById("box");
+				var circle=document.createElement("div");
+//				circle.className="circle";
+				circle.setAttribute("class","circle");
+				box.appendChild(circle);
+				var ul=document.getElementById("ul");
+				var lis=ul.children;
+//				alert(lis.length);
+				for(var i=0;i<lis.length;i++){
+					var newSpan=document.createElement("span");
+					newSpan.innerHTML=i+1;
+					circle.appendChild(newSpan);
+				}
+				var child=circle.children;
+				child[0].setAttribute("class","current");
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div class="silder">
+				<ul id="ul">
+					<li><img src="img/1.jpg" alt="" /></li>
+					<li><img src="img/2.jpg" alt="" /></li>
+					<li><img src="img/3.jpg" alt="" /></li>
+					<li><img src="img/4.jpg" alt="" /></li>
+					<li><img src="img/5.jpg" alt="" /></li>
+					<li><img src="img/6.jpg" alt="" /></li>
+				</ul>
+			</div>
+			<!--<div class="circle">
+				<span>1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+				<span>6</span>
+			</div>-->
+		</div>
+	</body>
+</html>
